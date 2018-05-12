@@ -1,0 +1,165 @@
+" ==============================================================================
+" Quick-edit settings                                                        {{{
+
+nnoremap gsrc :write | execute ':!nvim $MYVIFMRC' | restart<CR>
+nnoremap gsm  :write | execute ':!nvim ~/.config/vifm/keymap.vifm' | restart<CR>
+nnoremap gsc  :write | execute ':!nvim ~/.config/vifm/colors/dark.vifm' | restart<CR>
+nnoremap =r :reload<CR>
+
+nnoremap <A-n><A-m> :Cmd<space>
+
+" }}}
+" ==============================================================================
+" Normal Mappings                                                              {{{
+
+nnoremap ; :
+
+nnoremap <Esc> :nohl<CR>zR
+
+nnoremap <A-j> 5j
+nnoremap <A-k> 5k
+nnoremap <A-h> h
+nnoremap <A-l> l
+
+" undo/redo
+nnoremap u u
+nnoremap U <C-R>
+
+nnoremap .     za
+nnoremap <C-H> za
+
+nnoremap o gl
+nnoremap O <C-W>w:cd %C<CR><C-W>w
+
+" }}}
+" ==============================================================================
+" Navigation                                                                 {{{
+
+nnoremap H  <C-O>
+nnoremap L  <C-I>
+
+nnoremap gu gh
+
+nnoremap <A-u> <C-U>
+nnoremap <A-d> <C-D>
+"nnoremap <C-p> <C-o>
+"nnoremap <C-n> <C-i>
+
+nnoremap <C-F> :find<CR>
+
+nnoremap i      /
+
+" }}}
+" ==============================================================================
+" File management                                                            {{{
+
+" put symbolic links with absolute/relative paths.
+"nnoremap lna al
+"nnoremap lnr rl
+
+" Mappings for faster renaming
+nnoremap r  cw<M-b>
+nnoremap R  cW
+nnoremap cc cw<C-u>
+
+" Move to
+"nnoremap mv :!mv %f<space>
+
+nnoremap ge :edit<CR>
+
+" Open file in the background using its default program
+nnoremap go    :file &<CR>l
+nnoremap <A-o> :file &<CR>l
+
+" Yank directory path into the clipboard
+nnoremap yp :!echo %d | clip %i<CR>
+nnoremap yP :!echo %D | clip %i<CR>
+" Yank file path into the clipboard
+nnoremap yf :!echo %c:p | clip %i<CR>
+nnoremap yF :!echo %C:p | clip %i<CR>
+"nnoremap ya :!echo %a:p | xclip %i<CR>
+
+nnoremap a :touch newfile<CR>cw<C-U>
+nnoremap A :mkdir newdir<CR>cw<C-U>
+
+" Action -> to other panel
+"nnoremap E :edit<CR>
+nnoremap Y :copy<CR>
+nnoremap M :move<CR>
+nnoremap D :delete<CR>
+nnoremap W <C-W>w:cd %F<CR><C-w>w
+
+
+" }}}
+" ==============================================================================
+" Panels                                                                     {{{
+
+nnoremap <A-w>   <C-W>w
+qnoremap <A-w>   <C-W>w
+
+" Toggle visibility of preview window
+nnoremap <A-p>   :view<CR>
+nnoremap <C-P>   :view<CR>
+qnoremap <C-P>  q:view<CR>
+
+nnoremap <C-W>P   :view<CR>
+qnoremap <C-W>P   q:view<CR>
+
+nnoremap <A-space> :view<CR>
+qnoremap <A-Space> w
+qnoremap <Space>   <A-Space>
+
+
+" }}}
+" ==============================================================================
+" Filters & Previews                                                         {{{
+
+" Display sorting dialog
+nnoremap s :sort<CR>
+
+nnoremap <Space> :!gloobus-preview %c &<CR>
+nnoremap gp      :!gloobus-preview %c &<CR>
+
+nnoremap <C-L> :lsl<CR>
+
+nnoremap - zf
+
+" }}}
+" ==============================================================================
+" External                                                                   {{{
+
+" Open console in current directory
+nnoremap <C-N> :!iterm &<CR>
+
+" }}}
+" ==============================================================================
+" Command line                                                               {{{
+
+cnoremap <A-j> <Down>
+cnoremap <A-k> <Up>
+cnoremap <A-h> <Home>
+cnoremap <A-l> <End>
+
+cnoremap <A-i> <C-X>c
+
+" }}}
+" ==============================================================================
+" Toggle settings                                                            {{{
+
+" (change owner mapping remap)
+nnoremap cO   co
+
+" [c]hange [o]ption ...
+nnoremap col  :set lsview!<CR>
+nnoremap con  :set number!<CR>
+nnoremap cop  :view<CR>
+nnoremap corn :set relativenumber!<CR>
+nnoremap cov  :view<CR>
+nnoremap cow  :set wrap!<CR>
+
+" }}}
+" ==============================================================================
+
+nmap mv :move<space>
+nnoremap gh :cd ~<CR>
+

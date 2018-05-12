@@ -1,0 +1,45 @@
+" vim: ft=vifm
+
+"Win,        Border,     CurrLine, Selected,
+"TopLineSel, TopLine,    CmdLine,
+"ErrorMsg,   StatusLine, WildMenu, JobLine
+
+"Directory, Link, BrokenLink, Socket, Device,Executable,Fifo
+
+
+" Interface/UI
+
+hi Win        cterm=none      ctermfg=255       ctermbg=236
+hi CurrLine   cterm=bold                        ctermbg=244
+hi OtherLine                                    ctermbg=234
+
+hi TopLine    cterm=bold       ctermfg=232      ctermbg=244
+hi TopLineSel cterm=bold       ctermfg=255      ctermbg=4
+hi Border                                       ctermbg=238
+hi StatusLine cterm=none       ctermfg=240      ctermbg=233
+hi WildMenu   cterm=none       ctermfg=255      ctermbg=27
+
+hi Selected   cterm=none       ctermfg=default  ctermbg=4
+
+
+
+" Generic filetypes:
+
+hi Directory  cterm=bold      ctermfg=226
+hi Link       cterm=underline ctermfg=221
+hi BrokenLink cterm=reverse   ctermfg=red     ctermbg=232
+hi Executable cterm=none      ctermfg=40
+hi Device     cterm=bold      ctermfg=yellow
+hi Fifo       cterm=underline ctermfg=yellow
+hi Socket     cterm=underline ctermfg=magenta
+
+" file name specific highlight
+highlight /.*\.sh$|.*\.zsh$/I cterm=none ctermfg=105 ctermbg=default
+highlight /.*\.coffee$|.*\.js$|.*\.lua$|.*\.moon$|.*\.py$|.*\.rb$|.*\.ts$/I cterm=none ctermfg=112 ctermbg=default
+highlight /.*\.anx$|.*\.asf$|.*\.avi$|.*\.axv$|.*\.bmp$|.*\.cgm$|.*\.dl$|.*\.emf$|.*\.flc$|.*\.fli$|.*\.flv$|.*\.gif$|.*\.gl$|.*\.jpeg$|.*\.jpg$|.*\.m2v$|.*\.m4v$|.*\.mkv$|.*\.mng$|.*\.mov$|.*\.mp4$|.*\.mp4v$|.*\.mpeg$|.*\.mpg$|.*\.nuv$|.*\.ogm$|.*\.ogv$|.*\.ogx$|.*\.pbm$|.*\.pcx$|.*\.pgm$|.*\.png$|.*\.ppm$|.*\.qt$|.*\.rm$|.*\.rmvb$|.*\.svg$|.*\.svgz$|.*\.tga$|.*\.tif$|.*\.tiff$|.*\.vob$|.*\.webm$|.*\.wmv$|.*\.xbm$|.*\.xcf$|.*\.xpm$|.*\.xwd$|.*\.yuv$/I cterm=none ctermfg=13 ctermbg=default
+highlight /.*\.gitignore$|.*\.lock$|.*\.log$|.*\.md$|.*\.tags$|.*\.txt$/I cterm=none ctermfg=246 ctermbg=default
+highlight /.*\.aac$|.*\.au$|.*\.flac$|.*\.m4a$|.*\.mid$|.*\.midi$|.*\.mka$|.*\.mp3$|.*\.mpc$|.*\.ogg$|.*\.ra$|.*\.wav$/I cterm=none ctermfg=35 ctermbg=default
+highlight /.*\.7z$|.*\.Z$|.*\.ace$|.*\.alz$|.*\.arc$|.*\.arj$|.*\.bz$|.*\.bz2$|.*\.cab$|.*\.cpio$|.*\.deb$|.*\.dz$|.*\.ear$|.*\.gz$|.*\.jar$|.*\.lha$|.*\.lrz$|.*\.lz$|.*\.lz4$|.*\.lzh$|.*\.lzma$|.*\.lzo$|.*\.rar$|.*\.rpm$|.*\.rz$|.*\.sar$|.*\.t7z$|.*\.tar$|.*\.taz$|.*\.tbz$|.*\.tbz2$|.*\.tgz$|.*\.tlz$|.*\.txz$|.*\.tz$|.*\.tzo$|.*\.war$|.*\.xz$|.*\.z$|.*\.zip$|.*\.zoo$/I cterm=none ctermfg=9 ctermbg=default
+highlight /.*\.axa$|.*\.oga$|.*\.spx$|.*\.xspf$/I cterm=none ctermfg=default ctermbg=92
+highlight /.*\.css$|.*\.less$|.*\.sass$|.*\.scss$/I ctermfg=39 ctermbg=default
+

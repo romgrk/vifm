@@ -1,0 +1,1081 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Options:
+=aproposprg=apropos\ %a
+=autochpos
+=cdpath=
+=nochaselinks
+=columns=151
+=cpoptions=fst
+=deleteprg=
+=fastrun
+=findprg=find\ %s\ %a\ -print\ ,\ -type\ d
+=followlinks
+=fusehome=/home/romgrk/.local/share/vifm/fuse/
+=nogdefault
+=grepprg=ack\ -H\ -r\ %i\ %a\ %s
+=history=100
+=hlsearch
+=noiec
+=ignorecase
+=incsearch
+=laststatus
+=title
+=lines=24
+=locateprg=locate\ %a
+=mintimeoutlen=150
+=rulerformat=%l/%S\ 
+=runexec
+=noscrollbind
+=scrolloff=2
+=shell=/bin/zsh
+=shortmess=p
+=sizefmt=units:iec
+=slowfs=curlftpfs
+=smartcase
+=sortnumbers
+=statusline=%l\ [%L/%S]\ \ %t%=\ %A\ %10u:%-7g\ %15s\ %20d\ \ 
+=tabstop=8
+=timefmt=%m/%d\ %H:%M
+=timeoutlen=1000
+=trash
+=tuioptions=ps
+=undolevels=100
+=vicmd=nvim
+=vixcmd=
+=wrapscan
+=[viewcolumns=-{name}..,6{}.
+=]viewcolumns=-{name}..,6{}.
+=[sortgroups=
+=]sortgroups=
+=[nolsview
+=]lsview
+=[nonumber
+=]nonumber
+=[numberwidth=2
+=]numberwidth=2
+=[norelativenumber
+=]norelativenumber
+=[nodotfiles
+=]nodotfiles
+=confirm=delete,permdelete,
+=dotdirs=nonrootparent,
+=caseoptions=
+=suggestoptions=
+=iooptions=
+=dirsize=nitems=classify=:dir:/
+=vifminfo=options,commands,bookmarks,tui,dhistory,state,savedirs,chistory,shistory,phistory,fhistory,dirstack,registers
+=vimhelp
+=wildmenu
+=wildstyle=bar
+=wordchars=1-8,14-31,33-255
+=wrap
+
+# Commands:
+!Cmd
+	:exec '!echo "%a" >> $VIFM/keymap.vifm' | reload
+!Nmap
+	:exec '!echo "nmap %a" >> $VIFM/keymap.vifm' | reload
+!Nnoremap
+	:exec '!echo "nnoremap %a" >> $VIFM/keymap.vifm' | reload
+!df
+	df -h %m 2> /dev/null
+!diff
+	nvim -d %f %F
+!extract
+	!extract %f
+!filtertemps
+	windo filter! /^.*\.(lo|o|d|class|py[co])$|.*~$/
+!j
+	:cd !fasd -d %a
+!lsl
+	!!ls -l %a
+!make
+	!!make %a
+!mkcd
+	:mkdir %a | cd %a
+!moveAll
+	:!mv %f %D
+!mv
+	!mv %a
+!reload
+	:write | restart
+!run
+	!! ./%f
+!vgrep
+	nvim "+grep %a"
+!x
+	!extract %f
+!zip
+	!zip -r %a.zip %f
+
+# Marks:
+'D
+	/home/romgrk/Desktop
+	..
+1467842113
+'H
+	/home/romgrk/
+	..
+1453746125
+'a
+	/home/romgrk/.cache
+	..
+1461036000
+'b
+	/home/romgrk/bin
+	..
+1458888447
+'c
+	/home/romgrk/.config
+	..
+1460136026
+'d
+	/home/romgrk/downloads
+	..
+1458888447
+'e
+	/etc
+	..
+1454334232
+'f
+	/home/romgrk/.config/vifm
+	..
+1460748068
+'g
+	/home/romgrk/github
+	..
+1458888447
+'h
+	/home/romgrk/.local/share
+	..
+1467842113
+'l
+	/home/romgrk/.local
+	..
+1460721494
+'m
+	/home/romgrk/downloads
+	nwjs-nacl-v0.13.0-linux-x64
+1458750678
+'n
+	/home/romgrk/.config/nvim
+	..
+1460131171
+'o
+	/home/romgrk/bin
+	..
+1465368604
+'p
+	/home/romgrk/projects/
+	..
+1454340832
+'s
+	/usr/share
+	..
+1454334232
+'t
+	/home/romgrk/.local/share/Trash/files
+	..
+1467842113
+'u
+	/usr
+	..
+1454332898
+'v
+	/home/romgrk/chrome/extensions/simple-example
+	simple-example
+1464910212
+'x
+	/home/romgrk/.local/share/gnome-shell/extensions
+	..
+1467842113
+'z
+	/home/romgrk/.config/zsh
+	..
+1469277560
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2,-11,-9
+r2,-11,-9
+
+# Left window history (oldest to newest):
+d/home/romgrk
+	downloads
+0
+d/home
+	romgrk
+0
+d/
+	home
+0
+d/home
+	romgrk
+0
+d/home/romgrk
+	.fonts
+0
+d/home/romgrk/.fonts
+	monaco.ttf
+0
+d/home/romgrk/.fonts/monaco.ttf
+	..
+0
+d/home/romgrk/.fonts
+	monaco.ttf
+0
+d/home/romgrk/.fonts/monaco.ttf
+	monaco.ttf
+0
+d/home/romgrk/.fonts
+	RobotoCondensed-BoldItalic.ttf
+0
+d/home/romgrk/.config/google-chrome-beta/Default/Extensions
+	aegehkokpidlffcfabgicanhlmcakpcm
+0
+d/home/romgrk/.config/google-chrome-beta/Default/Extensions/aegehkokpidlffcfabgicanhlmcakpcm
+	1.5.1_0
+0
+d/home/romgrk/.config/google-chrome-beta/Default/Extensions/aegehkokpidlffcfabgicanhlmcakpcm/1.5.1_0
+	..
+0
+d/home/romgrk/downloads
+	url.html
+0
+d/home/romgrk/chrome/extensions
+	simple-example
+0
+d/home/romgrk/chrome/extensions/simple-example
+	simple-example
+0
+d/home/romgrk/chrome/extensions/simple-example/simple-example
+	..
+0
+d/home/romgrk/chrome/extensions/simple-example
+	..
+0
+d/home/romgrk/chrome/extensions
+	simple-example
+0
+d/home/romgrk/chrome/extensions/simple-example
+	..
+0
+d/home/romgrk/chrome/extensions
+	chrome_search
+0
+d/home/romgrk/chrome/s/simple-example
+	..
+0
+d/home/romgrk/chrome/s
+	simple-example
+0
+d/home/romgrk/chrome
+	extensions
+0
+d/home/romgrk/chrome/extensions
+	chrome_search
+0
+d/home/romgrk/chrome/extensions/chrome_search
+	chrome_search
+0
+d/home/romgrk/chrome/extensions/chrome_search/chrome_search
+	..
+0
+d/home/romgrk/chrome/extensions/chrome_search
+	chrome_search
+0
+d/home/romgrk/chrome/extensions
+	simple-example
+0
+d/home/romgrk/chrome/extensions/simple-example
+	..
+0
+d/home/romgrk/chrome/extensions
+	simple-example
+0
+d/home/romgrk/chrome/extensions/simple-example
+	..
+0
+d/home/romgrk/chrome/extensions
+	simple-example
+0
+d/home/romgrk
+	TIPP10
+0
+d/home/romgrk/modules/neovim-component/src
+	..
+0
+d/home/romgrk/modules/neovim-component
+	src
+0
+d/home/romgrk/modules
+	neovim-component
+0
+d/home/romgrk
+	modules
+0
+d/home/romgrk/modules
+	neovim-component
+0
+d/home/romgrk
+	.local
+0
+d/home/romgrk/.local
+	hub
+0
+d/home/romgrk/.local/hub
+	.git
+0
+d/home/romgrk/.local
+	hub
+0
+d/home/romgrk
+	.local
+0
+d/usr
+	..
+0
+d/
+	run
+0
+d/home/romgrk
+	docs
+0
+d/home/romgrk/docs
+	trucs
+0
+d/home/romgrk/tmp
+	..
+0
+d/home/romgrk/virtualbox
+	..
+0
+d/home/romgrk
+	img
+0
+d/home/romgrk/img
+	..
+0
+d/home/romgrk
+	.fonts
+0
+d/home/romgrk/.fonts
+	..
+0
+d/home/romgrk/downloads/eth-proxy
+	eth-proxy.py
+0
+d/home/romgrk/downloads
+	url.html
+0
+d/home/romgrk
+	downloads
+0
+d/home/romgrk/.local
+	VSCode-linux-x64
+0
+d/home/romgrk/.local/VSCode-linux-x64
+	..
+0
+d/home/romgrk/.local
+	VSCode-linux-x64-stable
+0
+d/home/romgrk/.local/VSCode-linux-x64-stable
+	VSCode-linux-x64
+0
+d/home/romgrk/.local/VSCode-linux-x64-stable/VSCode-linux-x64
+	..
+0
+d/home/romgrk/.local/VSCode-linux-x64-stable
+	VSCode-linux-x64
+0
+d/home/romgrk/.local
+	VSCode-linux-x64
+0
+d/home/romgrk
+	Desktop
+0
+d/home/romgrk/Desktop
+	..
+0
+d/home/romgrk
+	var
+29
+d/home/romgrk/var
+	nvim.profile.syscap
+2
+d/home/romgrk
+	var
+29
+d/home/romgrk/var
+	zsh
+1
+d/home/romgrk
+	var
+26
+d/home/romgrk/var
+	zsh
+1
+d/home/romgrk
+	templates
+24
+d/home/romgrk/templates
+	tern-project
+6
+d/home/romgrk/downloads
+	CreativeLinkEffects.zip
+1
+d/home/romgrk
+	var
+24
+d/home/romgrk/var
+	..
+0
+d/home/romgrk
+	var
+22
+d/home/romgrk/var
+	stats_page.OL-template
+4
+d/home/romgrk
+	sh
+16
+d/home/romgrk/sh
+	..
+0
+d/home/romgrk
+	sh
+16
+d/home/romgrk/sh
+	start-xcape
+1
+d/home/romgrk
+	var
+24
+d/home/romgrk/var
+	zsh
+1
+d/root/VirtualBox VMs/Win7
+	..
+0
+d/home/romgrk/Desktop
+	..
+0
+d/home/romgrk/.ethereum
+	nodekey
+14
+d/home/romgrk/downloads
+	cast.gif
+13
+d/home/romgrk
+	work
+24
+d/home/romgrk/work
+	quote_v021
+4
+d/home/romgrk/work/quote_v021
+	registrePresence_XML.xml
+9
+d/home/romgrk/downloads
+	CreativeLinkEffects.zip
+1
+d/home/romgrk
+	work
+22
+d/home/romgrk/work
+	quote_v021
+4
+d/home/romgrk/downloads
+	..
+0
+d/home/romgrk
+	lua
+8
+d/home/romgrk/lua
+	..
+0
+d/home/romgrk
+	lua
+8
+d/home
+	romgrk
+5
+d
+
+# Right window history (oldest to newest):
+D/home/romgrk/downloads
+	usr
+2
+D/home/romgrk/.local/VSCode-linux-x64-stable
+	
+2
+D/home/romgrk/.local
+	..
+0
+D/home/romgrk/.local/VSCode-linux-x64
+	resources
+3
+D/home/romgrk/.local/VSCode-linux-x64/resources
+	app
+1
+D/home/romgrk/.local/VSCode-linux-x64/resources/app
+	..
+0
+D/home/romgrk/.local/VSCode-linux-x64/resources
+	app
+1
+D/home/romgrk/.local/VSCode-linux-x64
+	bin
+1
+D/home/romgrk/.local/VSCode-linux-x64/bin
+	..
+0
+D/home/romgrk/.local/VSCode-linux-x64
+	locales
+2
+D/home/romgrk/.local/VSCode-linux-x64/locales
+	..
+0
+D/home/romgrk
+	etc
+11
+D/home/romgrk/etc
+	..
+0
+D/home/romgrk
+	github
+12
+D/home/romgrk/github
+	physic_engine
+9
+D/home/romgrk
+	.local
+2
+D/home/romgrk/.local
+	share
+24
+D/home/romgrk/.local/share
+	applications
+8
+D/home/romgrk/.local/share/applications
+	..
+0
+D/home/romgrk/Desktop
+	..
+0
+D/home/romgrk/var/zsh
+	..
+0
+D/home/romgrk
+	node_modules
+17
+D/home/romgrk/.cache
+	Avocode
+2
+D/home/romgrk/.local/share
+	applications
+8
+D/home/romgrk/.local/share/applications
+	tsconfig.desktop
+25
+D/home/romgrk/downloads
+	p4v2015.xls
+17
+D/home/romgrk
+	var
+27
+D/home/romgrk/var
+	stats_page
+1
+D/home/romgrk/var/stats_page
+	public\document\fonts
+3
+D/home/romgrk/var/stats_page/public\document\fonts
+	..
+0
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page/public/document
+	..
+0
+D/home/romgrk/var/stats_page/public
+	..
+0
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page/public/document
+	section-7c6b556c-6bda-4169-98a3-667ad8d8e112.html
+5
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page/public/document
+	js
+4
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page/public/document
+	js
+4
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page/public/document
+	js
+6
+D/home/romgrk/var/stats_page/public/document/js
+	external
+3
+D/home/romgrk/var/stats_page/public/document/js/external
+	angular-cookies.min.rjs
+1
+D/home/romgrk/var/stats_page/public/document/js
+	external
+3
+D/home/romgrk/var/stats_page/public/document
+	js
+6
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var
+	stats_page
+1
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page/public/document
+	section-7c6b556c-6bda-4169-98a3-667ad8d8e112.html
+8
+D/home/romgrk/var/stats_page/public
+	document
+1
+D/home/romgrk/var/stats_page
+	public
+1
+D/home/romgrk/var
+	stats_page
+1
+D/home/romgrk
+	var
+27
+D/home/romgrk/var
+	stats_page
+1
+D/home/romgrk
+	work
+29
+D/home/romgrk/work
+	DACO
+1
+D/home/romgrk/work/DACO
+	stats_page
+1
+D/home/romgrk/work/DACO/stats_page
+	public
+1
+D/home/romgrk/work/DACO/stats_page/public
+	document
+1
+D/home/romgrk/work/DACO
+	Data
+2
+D/home/romgrk/work
+	node_app
+3
+D/home/romgrk/work/node_app
+	static_data
+7
+D/home/romgrk/work/node_app/static_data
+	users_nofieldname.xlsx
+11
+D/home/romgrk/work/quote_v021
+	.tern-project
+5
+D/home/romgrk/work/quote_v021/public
+	document
+1
+D/home/romgrk/work/quote_v021/public/document
+	js
+4
+D/home/romgrk/work/quote_v021/public/document/js
+	resources
+4
+D/home/romgrk/work/quote_v021/public/document
+	images
+3
+D/home/romgrk/work/quote_v021/public/document/images
+	..
+0
+D/home/romgrk/work/quote_v021/public/document
+	generated
+2
+D/home/romgrk/work/quote_v021/public/document/generated
+	..
+0
+D/home/romgrk/work/quote_v021/public/document
+	css
+1
+D/home/romgrk/work/quote_v021/public/document/css
+	external
+1
+D/home/romgrk/work/quote_v021/public/document/css/external
+	..
+0
+D/home/romgrk/work/quote_v021/public/document/css
+	external
+1
+D/home/romgrk/work/quote_v021/public/document
+	css
+1
+D/home/romgrk/work/quote_v021/public
+	document
+1
+D/home/romgrk/work/quote_v021
+	public\document\color-profiles
+2
+D/home/romgrk/work/quote_v021/public\document\color-profiles
+	..
+0
+D/home/romgrk/work/quote_v021
+	public\document\fonts
+3
+D/home/romgrk/work/quote_v021/public\document\fonts
+	..
+0
+D/home/romgrk/work/quote_v021
+	public\document\snippets
+4
+D/home/romgrk/work/quote_v021/public\document\snippets
+	..
+0
+D/home/romgrk/work/quote_v021
+	..
+0
+D/home/romgrk/downloads/DataMapper-2016-07-11
+	DataMapper
+1
+D/home/romgrk/downloads/DataMapper-2016-07-11/DataMapper
+	..
+0
+D/home/romgrk/downloads/DataMapper-2016-07-11
+	DataMapper
+1
+D/home/romgrk/downloads
+	CreativeLinkEffects.zip
+1
+D/home/romgrk/work/quote_v021
+	index.xml
+6
+D/home/romgrk/work
+	node_app
+3
+D
+
+# Command line history (oldest to newest):
+:!cp dow
+:cd 
+:cd %D
+:lsl .zsh_history
+:m
+:.,.+21
+:find *.desktop
+:z build
+:dirs
+:find less.js
+:hi Link cterm=NONE
+:hi Link cterm=bold
+:shell
+:term
+:command x
+:com Cmd
+:!iterm &
+:!gnome-shell-extension-tool --enable keybinder
+:grep St.Table
+:fileviewer
+:cm 
+:!gloobus-preview icon.png
+:cmap
+:!gloobus-preview google_search.js
+:cmap <M-;> <C-X>c
+:!gloobus-preview 
+:cmap <A-;>
+:cmap <A-;> <C-x>c
+:cnoremap <A-i> <C-X>c
+:entry_suggestions.js
+:!eog 1.png
+:!zip guantanamera.zip \*.mp3
+:!zip guantanamera.zip Guantanamera.\ Celia\ Cruz.mp3 Guantanamera\ -\ Mariachi\ Acapulco.mp3 Julio\ Iglesias\ Guantanamera\ \(Live\).mp3
+:lsl monaco.ttf
+:!unlink monaco.ttf
+:!link -s ../.local/monaco.ttf/monaco.ttf
+:!link -s /home/romgrk//.local/monaco.ttf/monaco.ttf .
+:!ln -s /home/romgrk//.local/monaco.ttf/monaco.ttf .
+:!fc-cache -r
+:cd .config/
+:Nmap mv :move<space>
+:move ..
+:command! mv :move
+:mv s/simple-example .
+:move extensions/
+:move extensions/c/chrome_search/ /home/romgrk/chrome/extensions
+:!mv c/chrome_search/ .
+:command mv !mv %a
+:command! mv !mv %a
+:Nnoremap gh :cd ~<CR>
+:messages
+:!xdg-open Samsung.zip
+:find *.tt14
+:!xdg-open Releve8_2013.pdf &
+:!xdg-open RomainGrégoire.13t &
+:!nautilus . &
+:mv github/physic_engine/
+:mv output.gif
+:!cp out.ogv github/physic_engine/demo.ogv
+:hi CurrLine
+:hi CurrLine ctermfg=97
+:hi CurrLine ctermfg=default
+:hi TopLineSel
+:hi TopLineSel ctermbg=121
+:hi TopLineSel ctermbg=97
+:hi TopLineSel ctermbg=91
+:x
+:ls
+:ls vsinside
+:cnoremap <Tab> <CR>n/<Up>
+:cnoremap <silent> <Tab> <CR>n/<Up>
+:cmap <expr> <CR> getcmdline()
+:he
+:view
+:pa
+:cunmap <tab>
+:apropos
+:apropos a
+:apropos man
+:execute
+:!tsconfig.json.desktop
+:!xdg-open tsconfig.json.desktop
+:ll
+:ll epiphany-devdocs-8fdb0b40c9119d2312f8a7a763d72632c8be6582.desktop
+:ls -l epiphany-devdocs-8fdb0b40c9119d2312f8a7a763d72632c8be6582.desktop
+:ls -l
+:echo !ls -l epiphany-devdocs-8fdb0b40c9119d2312f8a7a763d72632c8be6582.desktop
+:!ls -l epiphany-devdocs-8fdb0b40c9119d2312f8a7a763d72632c8be6582.desktop
+:lsl
+:delete
+:!tsconfig.desktop
+:x stats_page.zip
+:mv public/
+:rename
+:!echo /home/romgrk/work/DACO/stats_page/public/document | clip
+:!echo /home/romgrk/work/DACO/stats_page/public/document | xclip -selection clipboard
+:x DataMapper-2016-07-11.zip
+:edit
+:!eog %f
+:!nautilus .
+
+# Search history (oldest to newest):
+/do
+/.fo
+/al
+/et
+/vi
+/^vif
+/.local
+/shar
+/Tr
+/romgrk
+/npmrc
+/gno
+/.ato
+/La
+/Virt
+/virt
+/goo
+/ho
+/etc
+/*.xml
+/tm
+//y
+/.*.xml
+/cli
+/n
+/bu
+/You
+/see
+/typeliwj
+/.lo
+/Ze
+/zea
+/gtk
+/ze
+/:
+/conf
+/img
+/sr
+/im
+/exten
+/extension
+/hi
+/vifm
+/back
+/src
+/pro
+/.fon
+/nvim
+/nv
+/l
+/.loc
+/le
+/dem
+/sty
+/version
+/fonts
+/mon
+/chrom
+/mo
+/modu
+/lo
+/dow
+/tmp
+/git
+/doc
+/.
+/.font
+/deja
+/local
+/sha
+/bin
+/dat
+/da
+/d
+/\c^.?d
+/^.?d
+/mod
+/va
+/var
+/wor
+/db
+/modul
+
+# Prompt history (oldest to newest):
+pcoffeelint.json
+pyao
+pshell
+p.gitignore
+pFontLister.sln
+pFontLister.userprefs
+prequest_accre
+p/home/romgrk/.local/share/Trash/files/001_nwjs-nacl-v0.13.0-linux-x64/nw
+p/home/romgrk/.local/share/Trash/files/002_nwjs-nacl-v0.13.0-linux-x64/nw
+p/home/romgrk/.local/share/Trash/files/002_nwjs-nacl-v0.13.0-linux-x64
+pnw
+pGIRScanner.docset
+pGObjectIntrospection.docset
+ppourquoi-les-oignons.jpeg
+pmujeres-bellas-al.jpg
+pL
+pdropdownterminal
+pnewfile
+pnewfileg
+phaskell
+pchrome
+pextensions
+ps
+pc
+pphysic_demo.ogv
+pcv_romaingregoire_old.pdf
+pcv_romaingregoire.pdf
+pDejaVuGlyph.ttf
+ptsconfig.desktop
+pstats_page.zip
+pcolor-profiles
+pfonts
+psnippets
+pwork
+pDACO
+pusers.xlsx
+pregistrePresence_XML.xml
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/romgrk/modules
+""/home/romgrk/node_modules
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/romgrk/.local/share/vifm/Trash/000_MaterialDesign-Webfont-master (1).zip
+	/home/romgrk/downloads/MaterialDesign-Webfont-master (1).zip
+t/home/romgrk/.local/share/vifm/Trash/000_PhysicsEditor-1.5.2-ubuntu64.deb
+	/home/romgrk/downloads/PhysicsEditor-1.5.2-ubuntu64.deb
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_semibold (1).ttf
+	/home/romgrk/downloads/myriad-set-pro_semibold (1).ttf
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_text (1).woff
+	/home/romgrk/downloads/myriad-set-pro_text (1).woff
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_thin (1).woff
+	/home/romgrk/downloads/myriad-set-pro_thin (1).woff
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_semibold.woff
+	/home/romgrk/local/myriad-set-pro_semibold.woff
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_text.woff
+	/home/romgrk/local/myriad-set-pro_text.woff
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_thin.woff
+	/home/romgrk/local/myriad-set-pro_thin.woff
+t/home/romgrk/.local/share/vifm/Trash/000_myriad-set-pro_ultralight.woff
+	/home/romgrk/local/myriad-set-pro_ultralight.woff
+t/home/romgrk/.local/share/vifm/Trash/000_VeltOS-0.1.0-x86_64.iso.torrent
+	/home/romgrk/.config/nvim/syntax/VeltOS-0.1.0-x86_64.iso.torrent
+t/home/romgrk/.local/share/vifm/Trash/000_VeltOS-0.1.0-x86_64.iso
+	/home/romgrk/.config/nvim/syntax/VeltOS-0.1.0-x86_64.iso
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].0
+]F
+s0
